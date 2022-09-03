@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News World 24/7</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--header begins-->
+<header>
+   <!--navigation menu-->
+   <nav class="navbar navbar-expand-lg  bg-info text-dark p-2 text-white  mt-3 pb-4 pt-3 pb-4">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-white " id="navbarTogglerDemo01">
+        <a class="navbar-brand text-white" href="#"><h2>News World 24/7</h2></a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><b>Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><b>News</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html"><b>Blog</b></a>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+   </nav>
+   <hr>
+<!--header ends-->
+<main>
+    <section class="faq-section">
+        <div class="faq container w-50 mt-5">
+            <div class="caption text-center mt-5 mb-5 pt-5">
+                <h1>Frequently Asked Questions</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable 
+                        content of a page when looking at its layout.</p>
+            </div>
+          <div class="faq accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  What are difference among var, let and const ?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    a. var is function-scoped while let and const are block-scoped.<br>
+                    b. var variables can be reassigned while let and const variables can not.<br>
+                    c. var variables are declared using the var keyword while let and const variables are declared using the let and const keywords respectively.<br>
+                    d. const variables are immutable while let and var variables are not.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    What are difference between Arrow Function and Regular Function ?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <table class="table">
+                        <thead>
+                          <tr><h4>Following are the main differences:</h4>
+                            <th scope="col">#</th>
+                            <th scope="col">Arrow Function</th>
+                            <th scope="col">#</th>
+                            <th scope="col"> Regular Function</th>
+                          
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Curly brackets are not required if only one expression is present. If there’s only one argument, then the parentheses are not required either</td>
+                            <th scope="row">1</th>
+                            <td>Curly brackets are required even there only one expression is present</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Arrow functions do not have arguments binding.</td>
+                            <th scope="row">2</th>
+                            <td>Arrow functions have arguments binding.</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Unlike Regular functions, arrow function does not have their own "this" keyword.</td>
+                            <th scope="row">3</th>
+                            <td>Regular functions have their own "this" keyword.</td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>The arrow functions are only callable and not constructible, i.e., arrow functions can never be used as constructor functions.</td>
+                            <th scope="row">4</th>
+                            <td> Regular functions are constructible; they can be called using the new keyword.</td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+    
+                  </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  What is CSS box model?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>CSS Box Model:</strong> The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:<br>
+                  <img src="images/css-box-model.png" class=" g-5 w-50 ms-5 ps-5" alt="...">
+                              
+                  <br><strong>Explanation of the different parts:</strong>
+                  <br>
+                    Content - The content of the box, where text and images appear<br>
+                    Padding - Clears an area around the content. The padding is transparent<br>
+                    Border - A border that goes around the padding and content<br>
+                    Margin - Clears an area outside the border. The margin is transparent<br><br>
+                    The box model allows us to add a border around elements, and to define space between elements.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    What is a semantic tag ?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Semantic Tag:</strong> A semantic element clearly describes its meaning to both the browser and the developer.
+                            In HTML there are some semantic elements that can be used to define different parts of a web page: 
+                    <p>&lt;article&gt;,
+                        &lt;aside&gt;,
+                        &lt;details&gt;,
+                        &lt;figcaption&gt;,
+                        &lt;figure&gt;,
+                        &lt;footer&gt;,
+                        &lt;header&gt;,
+                        &lt;main&gt;,
+                        &lt;mark&gt;,
+                        &lt;nav&gt;,
+                        &lt;section&gt;,
+                        &lt;summary&gt;,
+                        &lt;time></p>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+    </section>
+</main>
+<!--Footer Section-->  
+<footer class="text-center bg-gray mt-5 p-4">
+    <p> Copyright 2022 @ News World 24/7</p>
+</footer>
+<!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="js/news.js"></script>  
+    <script src="https://kit.fontawesome.com/a56cb831b4.js" crossorigin="anonymous"></script>
+</body>
+</html>
