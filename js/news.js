@@ -6,15 +6,14 @@ const loadCategoriesNav = () => {
       .catch((err) => console.log(err));
 };
 //displaying the categories 
-const CategoriesNav = document.getElementById("categories-nav");
+const categoriesNav = document.getElementById("categories-nav");
 const displayCategories = (categories) => {
   categories.forEach((category) => {
     const a = document.createElement("a");
     a.innerHTML = `<h6 id='${category.category_id}' onclick="loadCategoriesNews('${category.category_id}', '${category.category_name}')"> ${category.category_name}</h6>`;
-    CategoriesNav.appendChild(a);
+    categoriesNav.appendChild(a);
   });
 };
-
 //loading categories news
 const loadCategoriesNews = (id, category) => {
 document.querySelectorAll('#categories-nav a p').forEach(item=>{
@@ -31,13 +30,12 @@ fetch(` https://openapi.programming-hero.com/api/news/category/${id}`)
     .then((data) => displayCategoriesNews(data.data, category))
     .catch((err) => console.log(err));
 };
-    
 //spinner loader function 
 const toggleLoader=(isLoading)=> {
     if (isLoading) {
-        document.getElementById("loader").classList.remove("d-none");
+        document.getElementById("spin-loader").classList.remove("d-none");
     } else {
-        document.getElementById("loader").classList.add("d-none");
+        document.getElementById("spin-loader").classList.add("d-none");
         }
     }
 //displaying categories news 
