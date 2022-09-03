@@ -42,16 +42,28 @@
    <!--dynamic categories-->
    <div id="categories-nav" class=" text-center container my-4 d-flex justify-content-around align-items-center flex-column flex-lg-row flex-md-row">
    </div>
-
-
 </header>
 <!--header ends-->
+<main>
+<!-- spinner section-->
+   <section>
+    <div id="loader" class=" container d-flex justify-content-center d-none">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+   </section>
+<!--item founds-->    
+    <div id="item-found" class="container p-1 px-3 rounded d-none mt-2 bg-white">
+    </div>
+<!--news of the categories-->
+   <section id="news-container" class="container mt-5 d-flex flex-lg-column flex-column justify-content-center">
+   </section>
 
-  <section class="container"></section>
-  <div id="news-container"></div>
-    
-
+</main>  
+<!--scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="js/news.js"></script>  
+    <script src="https://kit.fontawesome.com/a56cb831b4.js" crossorigin="anonymous"></script>
 </body>
 </html>
