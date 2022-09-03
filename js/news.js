@@ -10,7 +10,7 @@ const CategoriesNav = document.getElementById("categories-nav");
 const displayCategories = (categories) => {
   categories.forEach((category) => {
     const a = document.createElement("a");
-    a.innerHTML = `<p id='${category.category_id}' onclick="loadCategoriesNews('${category.category_id}', '${category.category_name}')"> ${category.category_name}</p>`;
+    a.innerHTML = `<h6 id='${category.category_id}' onclick="loadCategoriesNews('${category.category_id}', '${category.category_name}')"> ${category.category_name}</h6>`;
     CategoriesNav.appendChild(a);
   });
 };
@@ -45,7 +45,7 @@ const toggleLoader=(isLoading)=> {
 const displayCategoriesNews = (data,category) => {
     if (data.length >= 0) {
       document.getElementById("item-found").classList.remove("d-none");
-      document.getElementById("item-found").innerHTML = `<h5>${data.length} News found in ${category}</h5>`;} 
+      document.getElementById("item-found").innerHTML = `<h3>${data.length} News found in ${category}</h3>`;} 
     else {
       document.getElementById("item-found").classList.add("d-none");
     }
@@ -65,7 +65,7 @@ return b.total_view-a.total_view
      </div>
      <div class="col-md-10  p-2">
      <div class="card-body">
-         <h5 class="card-title">${item.title}</h5>
+         <h4 class="card-title">${item.title}</h4>
          <p class="card-text">${item.details.slice(0,300)}......</p>
          
      <div  class="d-flex justify-content-between align-items-center flex-md-row flex-column">
