@@ -52,7 +52,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  What are difference among var, let and const ?
+                  What are the difference among var, let and const ?
                 </button>
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -93,7 +93,7 @@
                             <th scope="row">2</th>
                             <td>Arrow functions do not have arguments binding.</td>
                             <th scope="row">2</th>
-                            <td>Arrow functions have arguments binding.</td>
+                            <td>Regular functions have arguments binding.</td>
                             
                           </tr>
                           <tr>
@@ -119,50 +119,57 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  What is CSS box model?
+                 What are the difference among map, foreach, find and filter ?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>CSS Box Model:</strong> The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content. The image below illustrates the box model:<br>
-                  <img src="images/css-box-model.png" class=" g-5 w-50 ms-5 ps-5" alt="...">
+
                               
-                  <br><strong>Explanation of the different parts:</strong>
+                  <br><strong>.forEach:</strong>
                   <br>
-                    Content - The content of the box, where text and images appear<br>
-                    Padding - Clears an area around the content. The padding is transparent<br>
-                    Border - A border that goes around the padding and content<br>
-                    Margin - Clears an area outside the border. The margin is transparent<br><br>
-                    The box model allows us to add a border around elements, and to define space between elements.
+                  .forEach(), is used to execute the same code on every element in an array but does not change 
+                  the array and it returns undefined.<br>
+                  Example:<br>
+                  In the example below we would use .forEach() to iterate over an array of food and log that we 
+                  would want to eat each of them.<br>
+                  let food = ['mango','rice','pepper','pear'];
+                  food.forEach(function(foodItem){ console.log('I want to eat '+foodItem);
+                   });
+                   <br><strong>.map():</strong>
+                    .map() executes the same code on every element in an array and returns a new array with the 
+                    updated elements.<br>
+
+                    Example:
+                    In the example below we would use .map to iterate over the elements of the cost array 
+                    and divide each element by 10, then assign our new array containing the new cost to the 
+                    variable newCost.<br>
+
+                    let cost = [100,400,300,700];
+                    let newCost = cost.map(function(costItem){ return costItem / 10;
+                    });<br>
+                    console.log(newCost);
+
+                    <br><strong>.filter()</strong><br>
+                    .filter() checks every element in an array to see if it meets a certain criteria and returns 
+                    a new array with the elements that return truthy for the criteria.<br>
+
+                    Example:
+                    In the example below we would use .filter to return values that are less than 200.<br>
+                        
+                    let cost = [100,400,50,40,700];
+                    let smallCost = cost.filter(function(costItem){ return costItem < 200
+                    });<br>
+                    console.log(smallCost);
+
+                    <br><strong>.find()</strong><br>
+                    .find() When you want to select a single element from an array.
+
+
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    What is a semantic tag ?
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>Semantic Tag:</strong> A semantic element clearly describes its meaning to both the browser and the developer.
-                            In HTML there are some semantic elements that can be used to define different parts of a web page: 
-                    <p>&lt;article&gt;,
-                        &lt;aside&gt;,
-                        &lt;details&gt;,
-                        &lt;figcaption&gt;,
-                        &lt;figure&gt;,
-                        &lt;footer&gt;,
-                        &lt;header&gt;,
-                        &lt;main&gt;,
-                        &lt;mark&gt;,
-                        &lt;nav&gt;,
-                        &lt;section&gt;,
-                        &lt;summary&gt;,
-                        &lt;time></p>
-                    </div>
-                </div>
-              </div>
+
           </div>
         </div>
     </section>
