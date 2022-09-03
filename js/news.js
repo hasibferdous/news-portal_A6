@@ -97,9 +97,31 @@ return b.total_view-a.total_view
     });
     toggleLoader(false);
   };
+// loading details of news 
+const loadDetails=(id)=>{
+    fetch(`https://openapi.programming-hero.com/api/news/${id}`)
+    .then((res) => res.json())
+    .then((data) => displayDetails(data.data[0]))
+    .catch((err) => console.log(err));
+}
+//displaying details of news
+const displayDetails= data=>{
+    const modalTitle= document.getElementById('exampleModalLabel');
+    modalTitle.innerText=data.title;
 
+    const modalBodyParagraph= document.getElementById('news-details');
+    modalBodyParagraph.innerText=data.details;
+    
+    document.getElementById('author').innerHTML=`
+    <img width="45" height="45" class=" me-2 border rounded-circle" src=${data.author.img} alt="" srcset="">         
+                  
+    <div class="me-5">
+        <p class="card-text" > <strong><small> ${data.author.name ? data.author.name : "No author"} </small> </strong> <br> <small>${data.author.published_date.slice(0,10)}</small></p>
+          
+    </div> `;
 
-
+    document.getElementById('news-image').setAttribute('src', data.image_url);
+}
 
 loadCategoriesNav();
 
