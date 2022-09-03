@@ -1,17 +1,12 @@
 body {
     background-color: rgba(201, 204, 212, 0.658);
-    
-}
-
-.card-text {
-    color: gray;
-    
 }
 main{
     height: 2700px;
 }
-footer {
-    
+.card-text {
     color: gray;
-    
+}
+footer {
+    color: gray;
 }
